@@ -1,0 +1,285 @@
+:root{
+  --gold:#c8a34a;
+  --dark:#0a0a0a;
+  --light:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#000;
+  color:white;
+  font-family:"DM Sans",sans-serif;
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  filter:
+          brightness(45%)
+          contrast(115%);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+          linear-gradient(
+                  rgba(0,0,0,.25),
+                  rgba(0,0,0,.75)
+          );
+}
+
+.hero-content{
+  position:relative;
+
+  height:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  z-index:2;
+}
+
+.hero h1{
+
+  font-size:clamp(4rem,9vw,8rem);
+
+  color:var(--gold);
+
+  letter-spacing:10px;
+
+  margin-bottom:20px;
+
+  text-shadow:
+          0 0 20px rgba(200,163,74,.6);
+}
+
+.hero p{
+
+  max-width:800px;
+
+  font-size:1.3rem;
+
+  margin-bottom:40px;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.btn-primary{
+
+  text-decoration:none;
+
+  color:white;
+
+  border:1px solid var(--gold);
+
+  padding:16px 36px;
+
+  border-radius:50px;
+
+  transition:.3s;
+}
+
+.btn-primary:hover{
+
+  background:var(--gold);
+
+  color:black;
+}
+
+/* ==========================
+   Sections
+========================== */
+
+section{
+
+  padding:120px 10%;
+}
+
+section h2{
+
+  color:var(--gold);
+
+  text-align:center;
+
+  margin-bottom:60px;
+
+  letter-spacing:4px;
+}
+
+/* ==========================
+   Story
+========================== */
+
+.story-section{
+
+  background:#111;
+
+  text-align:center;
+}
+
+.story-section p{
+
+  max-width:900px;
+
+  margin:auto;
+
+  line-height:1.8;
+}
+
+/* ==========================
+   Bosses
+========================== */
+
+.boss-section{
+
+  background:#151515;
+}
+
+.boss-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+  gap:30px;
+}
+
+.boss-card{
+
+  overflow:hidden;
+
+  border-radius:15px;
+
+  background:#222;
+
+  transition:.3s;
+}
+
+.boss-card:hover{
+
+  transform:translateY(-10px);
+}
+
+.boss-card img{
+
+  width:100%;
+
+  display:block;
+}
+
+.boss-card h3{
+
+  padding:20px;
+
+  text-align:center;
+}
+
+/* ==========================
+   World
+========================== */
+
+.world-section{
+
+  background:#101010;
+}
+
+.world-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap:20px;
+}
+
+.world-grid div{
+
+  border:1px solid var(--gold);
+
+  padding:60px 20px;
+
+  text-align:center;
+
+  transition:.3s;
+}
+
+.world-grid div:hover{
+
+  background:
+          rgba(200,163,74,.15);
+}
+
+/* ==========================
+   Trailer
+========================== */
+
+.trailer-section{
+
+  background:#080808;
+}
+
+.video-frame{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  aspect-ratio:16/9;
+}
+
+.video-frame iframe{
+
+  width:100%;
+  height:100%;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+
+  background:black;
+
+  padding:60px;
+
+  text-align:center;
+}
+
+footer h3{
+
+  color:var(--gold);
+
+  margin-bottom:10px;
+}
